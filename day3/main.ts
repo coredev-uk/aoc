@@ -10,10 +10,12 @@ let currentTotal = 0
 // })
 // console.log(`Total Score: ${currentTotal}`)
 
+let alphabet = "abcdefghijklmnopqrstuvwxyz".split("")
+alphabet = alphabet.concat(alphabet.map((letter) => letter.toUpperCase()))
+
 function calculateSumOfStrings(listOfChars: Array<string>): number {
     console.log(listOfChars)
-    let alphabet = "abcdefghijklmnopqrstuvwxyz".split("")
-    alphabet = alphabet.concat(alphabet.map((letter) => letter.toUpperCase()))
+    
     let sum = 0
     listOfChars.forEach((char) => {
         if (alphabet.includes(char)) {
