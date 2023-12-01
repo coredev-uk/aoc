@@ -2,9 +2,6 @@ const decoder = new TextDecoder("utf-8");
 const data = Deno.readFileSync("input.txt");
 const decoded = decoder.decode(data)
 const lines = decoded.split('\n')
-
-
-
 const startReg = /(one|two|three|four|five|six|seven|eight|nine|[0-9])/
 const endReg = /.*(\d|one|two|three|four|five|six|seven|eight|nine).*/g
 const global = /(one|two|three|four|five|six|seven|eight|nine|[1-9])/g
