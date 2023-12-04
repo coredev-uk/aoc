@@ -2,7 +2,6 @@
 const decoder = new TextDecoder("utf-8");
 const data = Deno.readFileSync("input.txt");
 const decoded = decoder.decode(data)
-
 const games = decoded.split('\n')
 
 let total = 0
@@ -29,7 +28,6 @@ games.forEach((line, index) => {
         matches[index] = 0
     }
 })
-console.log(matches)
 
 function addMatches(cardIndex: number, match: number, matches: number[]): number {
     let total = 0;
@@ -46,7 +44,5 @@ matches.forEach((match, index) => {
     total += addMatches(index, match, matches)
 })
 total += games.length
-
-console.log(matches)
 
 console.log(total)
